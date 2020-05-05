@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour {
 
 	[Header("Spawn Rate")]
 	[Tooltip("Taxa de spawn por segundo.")]
-	[SerializeField] [Min(0)] float _initialSpawnRate = 0;
+	[SerializeField] [Min(0.01f)] float _initialSpawnRate = 0;
 	[Tooltip("Tempo para aumentar a taxa de spawn em segundos. 0 = não aumenta.")]
 	[SerializeField] [Min(0)] float _spawnIncreaseTime = 0;
 	[Tooltip("Fator de aumento da taxa de spawn. 1 = não aumenta.")]
