@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour {
 		_rb = GetComponent<Rigidbody2D>();
 		_controls = new Controls();
 		_controls.Player.Enable();
+
+		FindObjectOfType<PlayerLife>().playerDied += StopMoving;
 	}
 
 	void Update() {
@@ -24,6 +26,10 @@ public class PlayerMovement : MonoBehaviour {
 			Vector2 target = (Vector2)transform.position + Vector2.right * (_input.x * _speed * Time.fixedDeltaTime);
 			_rb.MovePosition(target);
 		}
+	}
+
+	void StopMoving() {
+		_controls.Player.Disable();
 	}
 
 	void OnDisable() {

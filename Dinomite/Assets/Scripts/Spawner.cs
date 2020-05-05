@@ -32,6 +32,7 @@ public class Spawner : MonoBehaviour {
 	float _spawnTime;
 	float _maxSpawnTime = 1;
 	int _num;
+	bool _stop = false;
 
 	void Start() {
 		_spawnTime = 1 / _initialSpawnRate;
@@ -39,32 +40,36 @@ public class Spawner : MonoBehaviour {
 			_maxSpawnTime = 1 / _spawnCap;
 		}
 		_num = _initialNum;
+
+		FindObjectOfType<PlayerLife>().playerDied += StopSpawn;
 	}
 
 	void Update() {
-		_spawnTimer += Time.deltaTime;
-		_increaseTimer += Time.deltaTime;
-		_numIncreaseTimer += Time.deltaTime;
+		if (!_stop) {
+			_spawnTimer += Time.deltaTime;
+			_increaseTimer += Time.deltaTime;
+			_numIncreaseTimer += Time.deltaTime;
 
-		if (_spawnTimer > _spawnTime) {
-			Spawn(_num);
-			_spawnTimer = 0;
-		}
-
-		if ((_increaseTimer > _spawnIncreaseTime) && (_spawnIncreaseTime != 0)) {
-			_spawnTime = _spawnTime / _spawnIncreaseRate;
-			if (_spawnCap != 0) {
-				_spawnTime = _spawnTime < _maxSpawnTime ? _maxSpawnTime : _spawnTime;
+			if (_spawnTimer > _spawnTime) {
+				Spawn(_num);
+				_spawnTimer = 0;
 			}
-			_increaseTimer = 0;
-		}
 
-		if ((_numIncreaseTimer > _numIncreaseTime) && (_numIncreaseTime != 0)) {
-			_num += _numIncreaseRate;
-			if (_numCap != 0) {
-				_num = _num > _numCap ? _numCap : _num;
+			if ((_increaseTimer > _spawnIncreaseTime) && (_spawnIncreaseTime != 0)) {
+				_spawnTime = _spawnTime / _spawnIncreaseRate;
+				if (_spawnCap != 0) {
+					_spawnTime = _spawnTime < _maxSpawnTime ? _maxSpawnTime : _spawnTime;
+				}
+				_increaseTimer = 0;
 			}
-			_numIncreaseTimer = 0;
+
+			if ((_numIncreaseTimer > _numIncreaseTime) && (_numIncreaseTime != 0)) {
+				_num += _numIncreaseRate;
+				if (_numCap != 0) {
+					_num = _num > _numCap ? _numCap : _num;
+				}
+				_numIncreaseTimer = 0;
+			}
 		}
 	}
 
@@ -75,5 +80,9 @@ public class Spawner : MonoBehaviour {
 			Vector3 random = new Vector3(Random.Range(-absX + partX * i + transform.position.x, -absX + partX * (i + 1) + transform.position.x), transform.position.y, 0);
 			Instantiate(_prefab, random, _prefab.transform.rotation);     // adicionar object pooling depois.
 		}
+	}
+
+	void StopSpawn() {
+		_stop = true;
 	}
 }

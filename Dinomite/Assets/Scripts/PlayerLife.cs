@@ -5,8 +5,9 @@ using System;
 
 public class PlayerLife : MonoBehaviour {
 	[SerializeField] [Min(1)] int _MaxLife = 1;
-	public int _life;
+	int _life;
 	public Action<int> lifeUpdate;
+	public Action playerDied;
 
 	void Start() {
 		_life = _MaxLife;
@@ -39,6 +40,7 @@ public class PlayerLife : MonoBehaviour {
 	}
 
 	void Die() {
+		playerDied();
 		Destroy(gameObject);
 	}
 }
