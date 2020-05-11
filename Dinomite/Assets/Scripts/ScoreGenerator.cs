@@ -42,6 +42,10 @@ public class ScoreGenerator : MonoBehaviour {
 		}
 	}
 
+	public int GetScore() {
+		return _score;
+	}
+
 	void StopScore() {
 		_stop = true;
 	}
