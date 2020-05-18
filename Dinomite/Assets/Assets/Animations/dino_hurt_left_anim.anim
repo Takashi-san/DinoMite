@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dino_idle_left_anim
+  m_Name: dino_hurt_left_anim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -39,16 +39,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 74bf8cbb1ac7a1f4e8ce91e5366e0927, type: 3}
-    - time: 0.1
-      value: {fileID: 21300000, guid: 267ff35ccd1fb464e855a9c2ddb23e72, type: 3}
-    - time: 0.2
-      value: {fileID: 21300000, guid: b1fab12e26edc264a8caa35ac6fc3713, type: 3}
+      value: {fileID: 21300000, guid: 301f4d41b40a97e4989dce5a3d0f72bb, type: 3}
+    - time: 0.11666667
+      value: {fileID: 21300000, guid: a929708fe6fcad34b8ff3065fb1f8746, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: df2d5b16e43b90148a3e2dc6e7acf1c7, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 10
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -70,20 +70,20 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 74bf8cbb1ac7a1f4e8ce91e5366e0927, type: 3}
-    - {fileID: 21300000, guid: 267ff35ccd1fb464e855a9c2ddb23e72, type: 3}
-    - {fileID: 21300000, guid: b1fab12e26edc264a8caa35ac6fc3713, type: 3}
+    - {fileID: 21300000, guid: 301f4d41b40a97e4989dce5a3d0f72bb, type: 3}
+    - {fileID: 21300000, guid: a929708fe6fcad34b8ff3065fb1f8746, type: 3}
+    - {fileID: 21300000, guid: df2d5b16e43b90148a3e2dc6e7acf1c7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.3
+    m_StopTime: 0.26666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
+    m_LoopTime: 1
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
