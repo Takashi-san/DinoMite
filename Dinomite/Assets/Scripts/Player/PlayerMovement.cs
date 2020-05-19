@@ -20,6 +20,12 @@ public class PlayerMovement : MonoBehaviour {
 	float _dashCDTimer = 0;
 
 	public Action<float> dashCooldownUpdate;
+	public Action<bool> isRight;
+	public Action<MovingState> movingState;
+
+	public enum MovingState {
+		Stop, Move, Dash
+	}
 
 	void Start() {
 		_rb = GetComponent<Rigidbody2D>();
@@ -27,9 +33,17 @@ public class PlayerMovement : MonoBehaviour {
 		_controls.Player.Action.performed += Dash;
 		_controls.Player.Enable();
 
-		FindObjectOfType<PlayerLife>().playerDied += StopMoving;
+		FindObjectOfType<PlayerLife>().playerDied += DisableMoving;
+		FindObjectOfType<PlayerLife>().hurt += Stunned;
+
 		if (dashCooldownUpdate != null) {
 			dashCooldownUpdate(1);
+		}
+		if (isRight != null) {
+			isRight(true);
+		}
+		if (movingState != null) {
+			movingState(MovingState.Stop);
 		}
 	}
 
@@ -56,23 +70,45 @@ public class PlayerMovement : MonoBehaviour {
 		else if (_input.x != 0) {
 			if (_input.x > 0) {
 				_isRight = 1;
+				isRight(true);
 			}
 			else {
 				_isRight = -1;
+				isRight(false);
 			}
 			Vector2 target = (Vector2)transform.position + Vector2.right * (_input.x * _speed * Time.fixedDeltaTime);
 			_rb.MovePosition(target);
+			movingState(MovingState.Move);
+		}
+		else {
+			movingState(MovingState.Stop);
 		}
 	}
 
 	void Dash(InputAction.CallbackContext context) {
 		if (_dashCDTimer > _dashCoolDown * (1 - _dashTolerance)) {
 			_dash = true;
+			movingState(MovingState.Dash);
 		}
 	}
 
-	void StopMoving() {
+	void Stunned(float time) {
+		StartCoroutine(StunnedTimer(time));
+	}
+
+	IEnumerator StunnedTimer(float time) {
+		DisableMoving();
+		yield return new WaitForSeconds(time);
+		EnableMoving();
+		yield break;
+	}
+
+	public void DisableMoving() {
 		_controls.Player.Disable();
+	}
+
+	public void EnableMoving() {
+		_controls.Player.Enable();
 	}
 
 	void OnDisable() {
