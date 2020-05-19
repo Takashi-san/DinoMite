@@ -897,6 +897,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MaxLife: 3
+  _invulnerableTime: 3
+  _stunRatio: 0.33
+  _visual: {fileID: 196420994}
+  _blinkTime: 0.1
 --- !u!70 &680994954
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

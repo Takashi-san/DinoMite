@@ -33,7 +33,9 @@ public class PlayerMovement : MonoBehaviour {
 		_controls.Player.Action.performed += Dash;
 		_controls.Player.Enable();
 
-		FindObjectOfType<PlayerLife>().playerDied += StopMoving;
+		FindObjectOfType<PlayerLife>().playerDied += DisableMoving;
+		FindObjectOfType<PlayerLife>().hurt += Stunned;
+
 		if (dashCooldownUpdate != null) {
 			dashCooldownUpdate(1);
 		}
@@ -90,8 +92,23 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	void StopMoving() {
+	void Stunned(float time) {
+		StartCoroutine(StunnedTimer(time));
+	}
+
+	IEnumerator StunnedTimer(float time) {
+		DisableMoving();
+		yield return new WaitForSeconds(time);
+		EnableMoving();
+		yield break;
+	}
+
+	public void DisableMoving() {
 		_controls.Player.Disable();
+	}
+
+	public void EnableMoving() {
+		_controls.Player.Enable();
 	}
 
 	void OnDisable() {
