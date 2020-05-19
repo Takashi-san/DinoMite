@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e658ad26974124e46b6f9ce30f75a775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
+  _speed: 5
   _damage: 1
   _miniMorteiro: {fileID: 2707297648478627938, guid: 37fff17c09b56c74c9618aae76587bb0,
     type: 3}
-  _miniAngle: 30
+  _miniAngle: 15
 --- !u!212 &2707297648478627937
 SpriteRenderer:
   m_ObjectHideFlags: 0

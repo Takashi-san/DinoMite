@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb42e6371cb568438e395292a942cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
+  _speed: 5
   _damage: 1
   _obstaculo: {fileID: 2707297648478627938, guid: d184f322bd56e6c4bb3008bfb8b8bb3a,
     type: 3}
-  _obstaculoTime: 5
+  _obstaculoTime: 3
 --- !u!212 &2707297648478627937
 SpriteRenderer:
   m_ObjectHideFlags: 0
