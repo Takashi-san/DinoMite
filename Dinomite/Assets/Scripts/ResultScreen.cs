@@ -8,7 +8,6 @@ using TMPro;
 public class ResultScreen : MonoBehaviour {
 	[SerializeField] [Min(0)] float _showTime = 0;
 	[SerializeField] GameObject _resultScreen = null;
-	[SerializeField] TextMeshProUGUI _scoreText = null;
 	[SerializeField] string _nextScene = "";
 	bool _active = false;
 	Controls _controls;

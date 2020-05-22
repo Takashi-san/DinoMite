@@ -5,8 +5,8 @@ using UnityEngine;
 public class BGController : MonoBehaviour {
 	[SerializeField] SpriteRenderer _bgRenderer = null;
 	[SerializeField] SpriteRenderer _limitRenderer = null;
-	[SerializeField] Sprite[] _bgSprites;
-	[SerializeField] Sprite[] _limitSprites;
+	[SerializeField] Sprite[] _bgSprites = null;
+	[SerializeField] Sprite[] _limitSprites = null;
 
 	void Start() {
 		int index = Random.Range(0, _bgSprites.Length);
