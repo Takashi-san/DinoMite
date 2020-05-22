@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LifeCounter : MonoBehaviour {
 	[SerializeField] GameObject _lifeGood = null;
+	[SerializeField] GameObject _lifeExplode = null;
 	[SerializeField] GameObject _lifeBad = null;
 	[SerializeField] float _initialPosX = 0;
 	[SerializeField] float _initialPosY = 0;
@@ -17,6 +18,7 @@ public class LifeCounter : MonoBehaviour {
 	}
 
 	void LifeUpdate(int life) {
+		// Cria os containers caso não tenha containers suficientes para a vida do jogador.
 		if (_lifesGood.Length < life) {
 			_lifesGood = new GameObject[life];
 			_lifesBad = new GameObject[life];
@@ -33,7 +35,11 @@ public class LifeCounter : MonoBehaviour {
 
 		for (int i = 0; i < _lifesGood.Length; i++) {
 			if (i + 1 > life) {
-				_lifesGood[i].SetActive(false);
+				if (_lifesGood[i].activeInHierarchy) {
+					Vector3 position = Camera.main.ScreenToWorldPoint(_lifesGood[i].GetComponent<RectTransform>().transform.position);
+					Instantiate(_lifeExplode, position, _lifeExplode.transform.rotation);
+					_lifesGood[i].SetActive(false);
+				}
 			}
 			else {
 				_lifesGood[i].SetActive(true);
