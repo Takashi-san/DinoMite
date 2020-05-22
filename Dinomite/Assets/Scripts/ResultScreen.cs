@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 using TMPro;
 
 public class ResultScreen : MonoBehaviour {
+	[SerializeField] [Min(0)] float _showTime = 0;
 	[SerializeField] GameObject _resultScreen = null;
 	[SerializeField] TextMeshProUGUI _scoreText = null;
 	[SerializeField] string _nextScene = "";
@@ -21,9 +23,14 @@ public class ResultScreen : MonoBehaviour {
 	}
 
 	void ShowResult() {
-		_scoreText.text = FindObjectOfType<ScoreGenerator>().GetScore().ToString();
+		StartCoroutine(ShowTimer());
+	}
+
+	IEnumerator ShowTimer() {
+		yield return new WaitForSeconds(_showTime);
 		_resultScreen.SetActive(true);
 		_active = true;
+		yield break;
 	}
 
 	void Next(InputAction.CallbackContext context) {
