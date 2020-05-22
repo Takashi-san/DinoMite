@@ -11,6 +11,7 @@ public class ScoreCounter : MonoBehaviour {
 		}
 
 		FindObjectOfType<ScoreGenerator>().scoreUpdate += UpdateText;
+		_text.text = FindObjectOfType<ScoreGenerator>().GetScore().ToString();
 	}
 
 	void UpdateText(int score) {
