@@ -89,7 +89,9 @@ public class PlayerLife : MonoBehaviour {
 
 	void Die() {
 		playerDied();
-		StopCoroutine(_blink);
+		if (_blink != null) {
+			StopCoroutine(_blink);
+		}
 		if (_deathEffect != null) {
 			Instantiate(_deathEffect, transform.position, _deathEffect.transform.rotation);
 		}

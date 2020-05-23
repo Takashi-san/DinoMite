@@ -46,6 +46,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle Spine
       objectReference: {fileID: 0}
+    - target: {fileID: 294085899532722077, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 294085899532722077, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5018876879546805104, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
         type: 3}
       propertyPath: RotationBySpeedModule.curve.maxCurve.m_Curve.Array.size
@@ -210,6 +220,51 @@ PrefabInstance:
         type: 3}
       propertyPath: CollisionModule.collisionMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018876879546805104, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018876879546805104, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
+        type: 3}
+      propertyPath: ExternalForcesModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018876879546805104, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018876879546805104, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
+        type: 3}
+      propertyPath: CollisionModule.m_Dampen.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018876879546805104, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018876879546805104, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
+        type: 3}
+      propertyPath: CollisionModule.radiusScale
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018876879546805104, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018876879546805104, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018876879546805104, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6597755620990681285, guid: eb6c8775fdf8d6c409df5ce8d0359f03,
         type: 3}
@@ -361,6 +416,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle Bones
       objectReference: {fileID: 0}
+    - target: {fileID: 6297268749257472762, guid: 37fb47ba97c8d4444a02a66cf915d23c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297268749257472762, guid: 37fb47ba97c8d4444a02a66cf915d23c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9115656637013494634, guid: 37fb47ba97c8d4444a02a66cf915d23c,
         type: 3}
       propertyPath: RotationBySpeedModule.curve.maxCurve.m_Curve.Array.size
@@ -526,6 +591,46 @@ PrefabInstance:
       propertyPath: CollisionModule.collisionMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9115656637013494634, guid: 37fb47ba97c8d4444a02a66cf915d23c,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115656637013494634, guid: 37fb47ba97c8d4444a02a66cf915d23c,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115656637013494634, guid: 37fb47ba97c8d4444a02a66cf915d23c,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115656637013494634, guid: 37fb47ba97c8d4444a02a66cf915d23c,
+        type: 3}
+      propertyPath: CollisionModule.m_Dampen.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115656637013494634, guid: 37fb47ba97c8d4444a02a66cf915d23c,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115656637013494634, guid: 37fb47ba97c8d4444a02a66cf915d23c,
+        type: 3}
+      propertyPath: CollisionModule.radiusScale
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115656637013494634, guid: 37fb47ba97c8d4444a02a66cf915d23c,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115656637013494634, guid: 37fb47ba97c8d4444a02a66cf915d23c,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37fb47ba97c8d4444a02a66cf915d23c, type: 3}
 --- !u!4 &5300715585228887870 stripped
@@ -621,10 +726,80 @@ PrefabInstance:
       propertyPath: CollisionModule.collisionMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.44313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.07843138
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.12760223
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.8490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.54619485
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.5246529
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: CollisionModule.m_Dampen.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: CollisionModule.radiusScale
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924674340804863944, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5538578004033806346, guid: 7a55bbb4f74468c44850638c743d3f55,
         type: 3}
       propertyPath: m_Name
       value: Particle Blood
+      objectReference: {fileID: 0}
+    - target: {fileID: 5538578004033806346, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5538578004033806346, guid: 7a55bbb4f74468c44850638c743d3f55,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a55bbb4f74468c44850638c743d3f55, type: 3}
@@ -871,10 +1046,60 @@ PrefabInstance:
       propertyPath: CollisionModule.collisionMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4476290623392952550, guid: d298566013e60f544971a029ee58fae2,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476290623392952550, guid: d298566013e60f544971a029ee58fae2,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476290623392952550, guid: d298566013e60f544971a029ee58fae2,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476290623392952550, guid: d298566013e60f544971a029ee58fae2,
+        type: 3}
+      propertyPath: CollisionModule.m_Dampen.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476290623392952550, guid: d298566013e60f544971a029ee58fae2,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476290623392952550, guid: d298566013e60f544971a029ee58fae2,
+        type: 3}
+      propertyPath: CollisionModule.radiusScale
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476290623392952550, guid: d298566013e60f544971a029ee58fae2,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476290623392952550, guid: d298566013e60f544971a029ee58fae2,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5107973485087331578, guid: d298566013e60f544971a029ee58fae2,
         type: 3}
       propertyPath: m_Name
       value: Particle BigBones
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107973485087331578, guid: d298566013e60f544971a029ee58fae2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107973485087331578, guid: d298566013e60f544971a029ee58fae2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d298566013e60f544971a029ee58fae2, type: 3}
