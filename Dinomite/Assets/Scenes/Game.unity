@@ -2261,6 +2261,8 @@ MonoBehaviour:
   _stunRatio: 0.33
   _visual: {fileID: 196420994}
   _blinkTime: 0.1
+  _deathEffect: {fileID: 8536908489221140753, guid: 135d26ab74698fd4dbfbdf0847a8ac26,
+    type: 3}
 --- !u!70 &680994954
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
