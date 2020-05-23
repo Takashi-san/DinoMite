@@ -9,6 +9,7 @@ public class PlayerLife : MonoBehaviour {
 	[SerializeField] [Range(0, 1)] float _stunRatio = 0;
 	[SerializeField] SpriteRenderer _visual = null;
 	[SerializeField] [Min(0)] float _blinkTime = 0;
+	[SerializeField] GameObject _deathEffect = null;
 	int _life;
 	bool _isInvulnerable = false;
 	float _timer = 0;
@@ -88,7 +89,12 @@ public class PlayerLife : MonoBehaviour {
 
 	void Die() {
 		playerDied();
-		StopCoroutine(_blink);
+		if (_blink != null) {
+			StopCoroutine(_blink);
+		}
+		if (_deathEffect != null) {
+			Instantiate(_deathEffect, transform.position, _deathEffect.transform.rotation);
+		}
 		Destroy(gameObject);
 	}
 }

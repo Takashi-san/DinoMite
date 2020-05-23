@@ -1,37 +1,7 @@
 fileFormatVersion: 2
-guid: 7aa4823a7d2bbe3439e67c90deae01ae
+guid: e34ecc60ee9f8e144b7fa0bf3c707617
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 3474134349825414307
-    second: box_plain_rock_0
-  - first:
-      213: 1426155073635962733
-    second: box_plain_rock_1
-  - first:
-      213: 3017966322663241361
-    second: box_plain_rock_2
-  - first:
-      213: -6462649668275978392
-    second: box_plain_rock_3
-  - first:
-      213: -7938420742054049327
-    second: box_plain_rock_4
-  - first:
-      213: -9186781477817966635
-    second: box_plain_rock_5
-  - first:
-      213: 1912562346367253577
-    second: box_plain_rock_6
-  - first:
-      213: 9181945677708951148
-    second: box_plain_rock_7
-  - first:
-      213: 6542260777385425290
-    second: box_plain_rock_8
-  - first:
-      213: 6945918691249513072
-    second: box_plain_rock_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,28 +85,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: box_plain_rock_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 900
-        height: 900
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 276, y: 204, z: 249, w: 111}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0726ca6af3cd46060800000000000000
-      internalID: 6945918691249513072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
