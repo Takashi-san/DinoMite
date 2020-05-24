@@ -82,6 +82,16 @@ public class SceneHandler : MonoBehaviour {
 		yield break;
 	}
 
+	public void QuitGame() {
+#if UNITY_EDITOR
+		UnityEditor.EditorApplication.isPlaying = false;
+#elif UNITY_WEBPLAYER
+         //Application.OpenURL("google.com");
+#else
+         Application.Quit();
+#endif
+	}
+
 	void OnApplicationQuit() {
 		if (_transitionData) {
 			_transitionData.transition = null;

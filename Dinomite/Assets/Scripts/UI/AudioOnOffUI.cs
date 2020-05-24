@@ -9,7 +9,7 @@ public class AudioOnOffUI : MonoBehaviour {
 	[SerializeField] [Range(-80, 20)] float _offValue = -80;
 	Image _image;
 
-	void Start() {
+	void Awake() {
 		_image = GetComponent<Image>();
 	}
 
