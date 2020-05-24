@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Obstaculo : MonoBehaviour {
+	[SerializeField] GameObject _destroyEffect = null;
 	float _timer = 0;
 	float _activeTime = 0;
 
@@ -14,6 +15,9 @@ public class Obstaculo : MonoBehaviour {
 	}
 
 	void Destroy() {
+		if (_destroyEffect != null) {
+			Instantiate(_destroyEffect, transform.position, _destroyEffect.transform.rotation);
+		}
 		Destroy(gameObject);
 	}
 

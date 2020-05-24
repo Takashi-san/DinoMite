@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
 	float _dashTimer = 0;
 	float _dashCDTimer = 0;
 
+	public Action dash;
 	public Action<float> dashCooldownUpdate;
 	public Action<bool> isRight;
 	public Action<MovingState> movingState;
@@ -89,6 +90,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (_dashCDTimer > _dashCoolDown * (1 - _dashTolerance)) {
 			_dash = true;
 			movingState(MovingState.Dash);
+			dash();
 		}
 	}
 

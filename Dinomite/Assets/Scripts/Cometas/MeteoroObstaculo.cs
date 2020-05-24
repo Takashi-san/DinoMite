@@ -5,6 +5,7 @@ public class MeteoroObstaculo : MonoBehaviour {
 	[SerializeField] [Min(0)] int _damage = 0;
 	[SerializeField] GameObject _obstaculo = null;
 	[SerializeField] float _obstaculoTime = 0;
+	[SerializeField] GameObject _destroyEffect = null;
 	Rigidbody2D _rb;
 
 	void Start() {
@@ -28,6 +29,9 @@ public class MeteoroObstaculo : MonoBehaviour {
 	}
 
 	void Explode() {
+		if (_destroyEffect != null) {
+			Instantiate(_destroyEffect, transform.position, _destroyEffect.transform.rotation);
+		}
 		Destroy(gameObject);
 	}
 

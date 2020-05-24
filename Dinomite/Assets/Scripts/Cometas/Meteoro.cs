@@ -5,6 +5,7 @@ using UnityEngine;
 public class Meteoro : MonoBehaviour {
 	[SerializeField] [Min(0)] float _speed = 0;
 	[SerializeField] [Min(0)] int _damage = 0;
+	[SerializeField] GameObject _destroyEffect = null;
 	Rigidbody2D _rb;
 
 	void Start() {
@@ -27,6 +28,9 @@ public class Meteoro : MonoBehaviour {
 	}
 
 	void Explode() {
+		if (_destroyEffect != null) {
+			Instantiate(_destroyEffect, transform.position, _destroyEffect.transform.rotation);
+		}
 		Destroy(gameObject);
 	}
 }
