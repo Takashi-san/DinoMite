@@ -49,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _force: 9
   _damage: 1
+  _destroyEffect: {fileID: 2753632020693108147, guid: 4c1043a2c831bb54f98d3b83ff152634,
+    type: 3}
 --- !u!212 &2707297648478627937
 SpriteRenderer:
   m_ObjectHideFlags: 0

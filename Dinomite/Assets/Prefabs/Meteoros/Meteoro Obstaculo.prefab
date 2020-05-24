@@ -51,6 +51,8 @@ MonoBehaviour:
   _obstaculo: {fileID: 2707297648478627938, guid: d184f322bd56e6c4bb3008bfb8b8bb3a,
     type: 3}
   _obstaculoTime: 3
+  _destroyEffect: {fileID: 2753632020693108147, guid: a0f6e9bb82da4354da69ae7d9dc27e62,
+    type: 3}
 --- !u!212 &2707297648478627937
 SpriteRenderer:
   m_ObjectHideFlags: 0

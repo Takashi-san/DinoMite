@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5420275886092732299}
   - component: {fileID: 4404859654244061193}
   m_Layer: 0
-  m_Name: Particula MeteoroExplosao
+  m_Name: Particula MorteiroExplosao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.9245283, g: 0.34504092, b: 0.2660199, a: 0.5176471}
+      maxColor: {r: 0.6654798, g: 0.34117648, b: 1, a: 0.6039216}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -976,7 +976,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 20
+        scalar: 25
         minScalar: 30
         maxCurve:
           serializedVersion: 2
