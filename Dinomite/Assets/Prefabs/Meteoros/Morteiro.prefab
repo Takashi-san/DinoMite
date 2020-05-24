@@ -51,6 +51,8 @@ MonoBehaviour:
   _miniMorteiro: {fileID: 2707297648478627938, guid: 37fff17c09b56c74c9618aae76587bb0,
     type: 3}
   _miniAngle: 12.5
+  _destroyEffect: {fileID: 2753632020693108147, guid: af243443cf920dc49bc47380f56a54e2,
+    type: 3}
 --- !u!212 &2707297648478627937
 SpriteRenderer:
   m_ObjectHideFlags: 0

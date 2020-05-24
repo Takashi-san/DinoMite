@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2695835604363408744}
   - component: {fileID: 2707297648478627937}
   - component: {fileID: 2050658830354135304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstaculo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e01856960c85f44b1dd7256de3d751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destroyEffect: {fileID: 0}
+  _destroyEffect: {fileID: 2753632020693108147, guid: bb56e1eda7116c645adb7d64190e900a,
+    type: 3}
 --- !u!212 &2707297648478627937
 SpriteRenderer:
   m_ObjectHideFlags: 0
