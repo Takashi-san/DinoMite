@@ -7,6 +7,7 @@ public class Morteiro : MonoBehaviour {
 	[SerializeField] [Min(0)] int _damage = 0;
 	[SerializeField] GameObject _miniMorteiro = null;
 	[SerializeField] [Range(0, 90)] float _miniAngle = 0;
+	[SerializeField] GameObject _destroyEffect = null;
 	//[SerializeField] [Min(0)] int _miniNum = 0;
 	Rigidbody2D _rb;
 
@@ -31,6 +32,9 @@ public class Morteiro : MonoBehaviour {
 	}
 
 	void Explode() {
+		if (_destroyEffect != null) {
+			Instantiate(_destroyEffect, transform.position, _destroyEffect.transform.rotation);
+		}
 		Destroy(gameObject);
 	}
 

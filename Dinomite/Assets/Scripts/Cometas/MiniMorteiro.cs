@@ -5,6 +5,7 @@ using UnityEngine;
 public class MiniMorteiro : MonoBehaviour {
 	[SerializeField] [Min(0)] float _force = 0;
 	[SerializeField] [Min(0)] int _damage = 0;
+	[SerializeField] GameObject _destroyEffect = null;
 	Vector2 _direction;
 	Rigidbody2D _rb;
 
@@ -24,6 +25,9 @@ public class MiniMorteiro : MonoBehaviour {
 	}
 
 	void Explode() {
+		if (_destroyEffect != null) {
+			Instantiate(_destroyEffect, transform.position, _destroyEffect.transform.rotation);
+		}
 		Destroy(gameObject);
 	}
 
