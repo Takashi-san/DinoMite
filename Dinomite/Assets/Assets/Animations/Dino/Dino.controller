@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1102 &-8548497745558240463
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: death_default_left
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 9792686702c37bb41b4fd6edd1f28a86, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &-6978022571785638604
 AnimatorState:
   serializedVersion: 5
@@ -7,7 +33,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dino_dash_left_anim
+  m_Name: skill_dash_left_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -90,7 +116,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dino_parry_fail_right_anim
+  m_Name: skill_parry_fail_right_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -147,7 +173,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dino_parry_fail_left_anim
+  m_Name: skill_parry_fail_left_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -173,7 +199,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dino_parry_success_left_anim
+  m_Name: skill_parry_success_left_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -322,7 +348,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dino_jump_left_anim
+  m_Name: skill_jump_left_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -405,7 +431,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dino_jump_right_anim
+  m_Name: skill_jump_right_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -431,7 +457,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dino_dash_right_anim
+  m_Name: skill_dash_right_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -461,7 +487,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 3915515475198028994}
-    m_Position: {x: 300, y: 0, z: 0}
+    m_Position: {x: 300, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5986081842435909278}
     m_Position: {x: -300, y: 200, z: 0}
@@ -473,7 +499,7 @@ AnimatorStateMachine:
     m_Position: {x: 300, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6978022571785638604}
-    m_Position: {x: -300, y: 0, z: 0}
+    m_Position: {x: -300, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9158086233177614829}
     m_Position: {x: -300, y: 100, z: 0}
@@ -485,25 +511,28 @@ AnimatorStateMachine:
     m_Position: {x: -300, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3815318483851926493}
-    m_Position: {x: 300, y: 400, z: 0}
+    m_Position: {x: 300, y: -200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 783452385757314204}
-    m_Position: {x: -300, y: 400, z: 0}
+    m_Position: {x: -300, y: -200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4905066897053156715}
-    m_Position: {x: 300, y: 500, z: 0}
+    m_Position: {x: 300, y: -300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2526547081446269523}
-    m_Position: {x: -300, y: 500, z: 0}
+    m_Position: {x: -300, y: -300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3484468237347510944}
-    m_Position: {x: 300, y: 600, z: 0}
+    m_Position: {x: 300, y: -400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3040842038212061944}
-    m_Position: {x: -300, y: 600, z: 0}
+    m_Position: {x: -300, y: -400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2493896550545008338}
-    m_Position: {x: -265, y: 665, z: 0}
+    m_Position: {x: 300, y: 500, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -8548497745558240463}
+    m_Position: {x: -300, y: 500, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 7868397943249479415}
@@ -517,7 +546,7 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 20, y: 100, z: 0}
+  m_AnyStatePosition: {x: 20, y: 180, z: 0}
   m_EntryPosition: {x: 600, y: 100, z: 0}
   m_ExitPosition: {x: 600, y: 0, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
@@ -591,7 +620,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: dino_parry_success_right_anim
+  m_Name: skill_parry_success_right_anim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
