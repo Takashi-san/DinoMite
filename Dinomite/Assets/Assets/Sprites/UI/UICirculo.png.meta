@@ -1,37 +1,7 @@
 fileFormatVersion: 2
-guid: 0966eab856b70bc43b2d6aa45bab74f4
+guid: 3208ee1d75a8d0f489841759febf529b
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 568592810015043445
-    second: box_with_cave_painting_0
-  - first:
-      213: 642861085895377892
-    second: box_with_cave_painting_1
-  - first:
-      213: -308775878706600419
-    second: box_with_cave_painting_2
-  - first:
-      213: -8420786014581828077
-    second: box_with_cave_painting_3
-  - first:
-      213: 5335826957208371814
-    second: box_with_cave_painting_4
-  - first:
-      213: -3042016440908322788
-    second: box_with_cave_painting_5
-  - first:
-      213: -199217819659141362
-    second: box_with_cave_painting_6
-  - first:
-      213: 5897223571974787393
-    second: box_with_cave_painting_7
-  - first:
-      213: 5059262827650558967
-    second: box_with_cave_painting_8
-  - first:
-      213: 414100464765967853
-    second: box_with_cave_painting_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,13 +40,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 93, y: 93, z: 93, w: 93}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -115,28 +85,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: box_with_cave_painting_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 900
-        height: 900
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 298, y: 349, z: 300, w: 542}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ded13bfbd2e2fb500800000000000000
-      internalID: 414100464765967853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
