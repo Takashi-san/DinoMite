@@ -9,13 +9,18 @@ public class MiniMorteiro : MonoBehaviour {
 	Vector2 _direction;
 	Rigidbody2D _rb;
 
+	private Shake shake;
+
 	void Start() {
 		_rb = GetComponent<Rigidbody2D>();
 		_rb.AddForce(_force * _direction, ForceMode2D.Impulse);
+
+		shake = GameObject.FindGameObjectWithTag("Screenshake").GetComponent<Shake>();
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Player") {
+			shake.CamShake();
 			other.GetComponent<PlayerLife>().DealDamage(_damage);
 			Explode();
 		}
