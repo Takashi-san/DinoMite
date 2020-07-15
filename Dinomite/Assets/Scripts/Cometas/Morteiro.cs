@@ -11,8 +11,12 @@ public class Morteiro : MonoBehaviour {
 	//[SerializeField] [Min(0)] int _miniNum = 0;
 	Rigidbody2D _rb;
 
+	private Shake shake;
+
 	void Start() {
 		_rb = GetComponent<Rigidbody2D>();
+
+		shake = GameObject.FindGameObjectWithTag("Screenshake").GetComponent<Shake>();
 	}
 
 	void FixedUpdate() {
@@ -22,6 +26,7 @@ public class Morteiro : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Player") {
+			shake.CamShake();
 			other.GetComponent<PlayerLife>().DealDamage(_damage);
 			Explode();
 		}
