@@ -8,7 +8,7 @@ public class CooldownBar : MonoBehaviour {
 
 	void Awake() {
 		_slider = GetComponent<Slider>();
-		FindObjectOfType<PlayerMovement>().dashCooldownUpdate += BarUpdate;
+		FindObjectOfType<PlayerMovement>().actionCooldownUpdate += BarUpdate;
 	}
 
 	void BarUpdate(float reset) {

@@ -6,21 +6,16 @@ using System;
 
 public class PlayerMovement : MonoBehaviour {
 	[SerializeField] [Min(0)] float _speed = 0;
-	[SerializeField] [Min(0)] float _dashSpeed = 0;
-	[SerializeField] [Min(0)] float _dashDuration = 0;
-	[SerializeField] [Min(0)] float _dashCoolDown = 0;
-	[Tooltip("Quantos % antes do cooldown terminar é possível ativar o dash.")]
-	[SerializeField] [Range(0, 1)] float _dashTolerance = 0;
+	[SerializeField] IMovementAction _action = null;
 	Rigidbody2D _rb;
 	Controls _controls;
 	Vector2 _input;
-	bool _dash = false;
+	bool _doAction = false;
 	float _isRight = 1;
-	float _dashTimer = 0;
-	float _dashCDTimer = 0;
+	float _actionTimer = 0;
 
-	public Action dash;
-	public Action<float> dashCooldownUpdate;
+	public Action action;
+	public Action<float> actionCooldownUpdate;
 	public Action<bool> isRight;
 	public Action<MovingState> movingState;
 
@@ -30,15 +25,16 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Start() {
 		_rb = GetComponent<Rigidbody2D>();
+		_action.Setup(_rb);
 		_controls = new Controls();
-		_controls.Player.Action.performed += Dash;
+		_controls.Player.Action.performed += Action;
 		_controls.Player.Enable();
 
 		FindObjectOfType<PlayerLife>().playerDied += DisableMoving;
 		FindObjectOfType<PlayerLife>().hurt += Stunned;
 
-		if (dashCooldownUpdate != null) {
-			dashCooldownUpdate(1);
+		if (actionCooldownUpdate != null) {
+			actionCooldownUpdate(0);
 		}
 		if (isRight != null) {
 			isRight(true);
@@ -50,25 +46,23 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Update() {
 		_input = _controls.Player.Move.ReadValue<Vector2>();
-		_dashCDTimer += Time.deltaTime;
+		_actionTimer += Time.deltaTime;
 
-		float reset = _dashCoolDown - _dashCDTimer;
+		float reset = _action.CoolDown - _actionTimer;
 		reset = reset < 0 ? 0 : reset;
-		dashCooldownUpdate(reset / _dashCoolDown);
+		actionCooldownUpdate(1 - (reset / _action.CoolDown));
 	}
 
 	void FixedUpdate() {
-		if (_dash) {
-			_dashTimer += Time.fixedDeltaTime;
-			Vector2 target = (Vector2)transform.position + Vector2.right * (_isRight * _dashSpeed * Time.fixedDeltaTime);
-			_rb.MovePosition(target);
-			if (_dashTimer > _dashDuration) {
-				_dashTimer = 0;
-				_dashCDTimer = 0;
-				_dash = false;
+		if (_doAction) {
+			// Action
+			if (!_action.Action(_isRight)) {
+				_actionTimer = 0;
+				_doAction = false;
 			}
 		}
 		else if (_input.x != 0) {
+			// Determine direction
 			if (_input.x > 0) {
 				_isRight = 1;
 				isRight(true);
@@ -77,8 +71,9 @@ public class PlayerMovement : MonoBehaviour {
 				_isRight = -1;
 				isRight(false);
 			}
-			Vector2 target = (Vector2)transform.position + Vector2.right * (_input.x * _speed * Time.fixedDeltaTime);
-			_rb.MovePosition(target);
+
+			// Walk
+			Walk();
 			movingState(MovingState.Move);
 		}
 		else {
@@ -86,11 +81,17 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	void Dash(InputAction.CallbackContext context) {
-		if (_dashCDTimer > _dashCoolDown * (1 - _dashTolerance)) {
-			_dash = true;
+	void Walk() {
+		Vector2 target = (Vector2)transform.position + Vector2.right * (_input.x * _speed * Time.fixedDeltaTime);
+		_rb.MovePosition(target);
+	}
+
+	void Action(InputAction.CallbackContext context) {
+		if (_actionTimer > _action.CoolDown * (1 - _action.CoolDownTolerance)) {
+			_doAction = true;
+			action();
+
 			movingState(MovingState.Dash);
-			dash();
 		}
 	}
 

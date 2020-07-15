@@ -10,7 +10,7 @@ public class PlayerSfxController : MonoBehaviour {
 	void Awake() {
 		_audioSource = GetComponent<AudioSource>();
 		GetComponent<PlayerLife>().hurt += Hurt;
-		GetComponent<PlayerMovement>().dash += Dash;
+		GetComponent<PlayerMovement>().action += Dash;
 	}
 
 	void Hurt(float stunTime) {
@@ -25,6 +25,6 @@ public class PlayerSfxController : MonoBehaviour {
 
 	void OnDisable() {
 		GetComponent<PlayerLife>().hurt -= Hurt;
-		GetComponent<PlayerMovement>().dash -= Dash;
+		GetComponent<PlayerMovement>().action -= Dash;
 	}
 }
